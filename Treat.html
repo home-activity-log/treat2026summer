@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ご褒美</title>
+    </head>
+    <body>
+
+  <center>
+  <br><br><br><br><br>
+
+    <h1 id="result">ご褒美スロット</h1>
+
+  <br><br><br>
+
+    <button id="btn">スタート</button>
+
+     <script>
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const btn = document.getElementById("btn");
+const result = document.getElementById("result");
+
+btn.addEventListener("click", function() {
+    const dice = getRandomInt(1, 15);
+
+    if ( dice >= 1 && dice < 2) { 
+        result.textContent = "🎯 お母さんに足をニモニモしてもらう券を獲得";
+    } else if ( dice >= 3 && dice < 4) { 
+        result.textContent = "🎯 お母さんに何でもお願いごとが出来る券を獲得";
+    } else if ( dice >= 5 && dice < 6) { 
+        result.textContent = "🎯 猫にブラッシングをする券を獲得";
+    } else if ( dice >= 7 && dice < 8) { 
+        result.textContent = "🎯 お小遣いに500円を獲得";
+    } else if ( dice >= 9 && dice < 10) { 
+        result.textContent = "🎯 ご褒美スロットをあと２回出来る券を獲得";
+    } else if ( dice >= 11 && dice < 12) { 
+        result.textContent = "💀 ベランダのお掃除をする";
+    } else { 
+        result.textContent = "💀 部屋のゴミを１個拾ってゴミ箱へ入れる" ;
+    }
+  
+});
+  </script>
+
+</center>
+  
+    </body>
+</html>
