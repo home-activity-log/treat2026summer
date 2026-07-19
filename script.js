@@ -6,7 +6,7 @@ const btn = document.getElementById("btn");
 const result = document.getElementById("result");
 
 btn.addEventListener("click", function() {
-    const dice = getRandomInt(1, 15);
+    const dice = getRandomInt(1, 100);
 
     if ( dice >= 1 && dice <= 5) { 
         result.textContent = "🎯録画か動画を30分見てもいい券を獲得";
